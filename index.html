@@ -1,0 +1,146 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+
+
+    <style>
+        .red {
+            color: red;
+        }
+
+        .blue {
+            color: blue;
+        }
+
+        .green {
+            color: green;
+        }
+
+        .theme-light {
+            background-color: white;
+            color: black;
+        }
+
+        .theme-dark {
+            background-color: black;
+            color: white;
+        }
+
+
+        .toggle-btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #ddd;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            font-size: 16px;
+        }
+
+            .toggle-btn:hover {
+                background-color: #bbb;
+            }
+
+            .toggle-btn.active {
+                background-color: #3498db;
+                color: white;
+                font-weight: bold;
+            }
+
+
+
+        .highlight {
+            background-color: yellow;
+        }
+
+
+        .tabs {
+            display: inline-flex;
+            gap: 10px;
+        }
+
+        .tab-btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #ddd;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            font-size: 16px;
+        }
+
+            .tab-btn:hover {
+                background-color: #bbb;
+            }
+
+            .tab-btn.active {
+                background-color: #3498db;
+                color: white;
+                font-weight: bold;
+            }
+
+        #display {
+            margin-top: 30px;
+            padding: 20px;
+            border: 2px solid #3498db;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            min-height: 60px;
+            max-width: 500px;
+            margin-inline: auto;
+        }
+
+
+
+
+    </style>
+
+    <script src="script.js" defer></script>
+</head>
+<body class="theme-light">
+
+    <p id="element1" class="red">This is a paragraph.</p>
+    <button onclick="changeClass('red')">Change class to Red</button>
+    <button onclick="changeClass('blue')">Change class to Blue</button>
+    <button onclick="changeClass('green')">Change class to Green</button>
+    <br />
+    <br />
+
+    <button onclick="toggleTheme(this)" class="toggle-btn">Toggle Theme</button>
+    <br />
+    <br />
+
+    <p> Same buttons, on click checks and toggles highlight</p>
+    <button onclick="highlight(this)" id="highlight" class="">Highlighted?</button>
+    <button onclick="highlight(this)" id="highlight" class="highlight">Highlighted?</button>
+    <button onclick="highlight(this)" id="highlight" class="">Highlighted?</button>
+    <br />
+    <br />
+
+    <p id="info">Select a name to display</p>
+    <div class="tabs">
+        <button class="tab-btn active" onclick="info(0)">Name_1</button>
+        <button class="tab-btn" onclick="info(1)">Name_2</button>
+        <button class="tab-btn" onclick="info(2)">Name_3</button>
+    </div>
+    <div id="display">
+        <div>
+            <h2>1</h2>
+            <p>Good</p>
+        </div>
+        <div>
+            <h2>2</h2>
+            <p>Nice</p>
+        </div>
+        <div>
+            <h2>3</h2>
+            <p>Excellent</p>
+        </div>
+    </div>
+
+
+</body>
+</html>
